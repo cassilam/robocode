@@ -21,7 +21,29 @@ public class Virr extends AdvancedRobot
 			setTurnGunLeft(99999); 
 			setTurnGunRight(99999); 
 		} //scans for robots
-	}
+	   
+      // Wall Avoidance
+      if (getHeading() > 315 && getHeading() <= 45) {
+         if (getY() + 45 == battlefield_height) {
+            setTurnLeft(45);
+         }
+      } else if (getHeading() <= 315 && getHeading() > 225) {
+         if (getX() == 45) {
+            setTurnLeft(45);
+         }
+      } else if (getHeading() <= 215 && getHeading() > 135) {
+         if (getY() == 45) {
+            setTurnLeft(45);
+         }
+      } else if (getHeading() <= 135 && getHeading > 45) {
+         if (getX() + 45 == battlefield_width) {
+            setTurnLeft(45);
+         }
+      }
+
+      
+   }
+
 
 	/**
 	 * onScannedRobot: What to do when you see another robot
@@ -92,6 +114,12 @@ public class Virr extends AdvancedRobot
 		setTurnGunLeft(720); 
 		scan(); 
 	}	
-	//create method/algorithn for preventing bot from running into walls (bc running into walls = loss of power and possibility of getting stuck)
+	
+   /**
+    * TODO: create method/algorithn for preventing bot 
+    * from running into walls (bc running into walls = loss 
+    * of power and possibility of getting stuck)
+    */
 
+   
 }
