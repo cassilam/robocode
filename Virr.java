@@ -28,7 +28,9 @@ public class Virr extends AdvancedRobot
 	 */
 	//create shooting strategies: head on, circular, pattern
 	public void onScannedRobot(ScannedRobotEvent e) { 
-		if ((turn%2) == 0){
+		// Original Author: Jae Marsh
+      // https://www.ibm.com/developerworks/library/j-dodge/
+      if ((turn%2) == 0){
 			setTurnLeft(e.getBearing() + 90); //turns to the right to make it easier to
 		} else {
 			setTurnLeft(e.getBearing() - 90); 
