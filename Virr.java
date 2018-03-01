@@ -114,12 +114,5 @@ public class Virr extends AdvancedRobot
 		setTurnGunLeft(720); 
 		scan(); 
 	}	
-	
-   /**
-    * TODO: create method/algorithn for preventing bot 
-    * from running into walls (bc running into walls = loss 
-    * of power and possibility of getting stuck)
-    */
-
    
 }
