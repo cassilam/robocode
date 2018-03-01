@@ -1,3 +1,4 @@
+
 package Virr;
 import robocode.*; 
 import java.awt.Color;
@@ -13,9 +14,9 @@ public class Virr extends AdvancedRobot
 	 * run: Virr's default behavior
 	 */
 	double prevEnergy = 100.00; //initializes prevEnergy for onScannedRobot
+	int turn = 1; 
 	public void run() {
 		setColors(Color.red,Color.blue,Color.green); // body,gun,radar
-		int turn = 1; 
 		// Robot main loop
 		for (int i = 0; i < 100; i++){
 			setTurnGunLeft(99999); 
@@ -24,7 +25,7 @@ public class Virr extends AdvancedRobot
 	   
       // Wall Avoidance
       if (getHeading() > 315 && getHeading() <= 45) {
-         if (getY() + 45 == battlefield_height) {
+         if (getY() + 45 == getBattleFieldHeight()) {
             setTurnLeft(45);
          }
       } else if (getHeading() <= 315 && getHeading() > 225) {
@@ -35,8 +36,8 @@ public class Virr extends AdvancedRobot
          if (getY() == 45) {
             setTurnLeft(45);
          }
-      } else if (getHeading() <= 135 && getHeading > 45) {
-         if (getX() + 45 == battlefield_width) {
+      } else if (getHeading() <= 135 && getHeading() > 45) {
+         if (getX() + 45 == getBattleFieldWidth()) {
             setTurnLeft(45);
          }
       }
