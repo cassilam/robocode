@@ -1,5 +1,5 @@
 
-package Virr;
+package jhcao_cassilam;
 import robocode.*; 
 import java.awt.Color;
 
