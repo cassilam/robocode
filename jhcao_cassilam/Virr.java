@@ -24,22 +24,22 @@ public class Virr extends AdvancedRobot
 	   
       	// Wall Avoidance
      	if (getHeading() > 315 && getHeading() <= 45) {
-      		if (getY() + 45 == getBattleFieldHeight()) {
-           		setTurnLeft(45);
-         	}
-      	} else if (getHeading() <= 315 && getHeading() > 225) {
-        	if (getX() == 45) {
-            	setTurnLeft(45);
+      	if (getY() + 45 == getBattleFieldHeight()) {
+           	setTurnLeft(45);
+         }
+      } else if (getHeading() <= 315 && getHeading() > 225) {
+         if (getX() == 45) {
+           	setTurnLeft(45);
         	}
-      	} else if (getHeading() <= 215 && getHeading() > 135) {
+      } else if (getHeading() <= 215 && getHeading() > 135) {
         	if (getY() == 45) {
-            	setTurnLeft(45);
-         	}
-      	} else if (getHeading() <= 135 && getHeading() > 45) {
+           	setTurnLeft(45);
+        	}
+     	} else if (getHeading() <= 135 && getHeading() > 45) {
         	if (getX() + 45 == getBattleFieldWidth()) {
-            	setTurnLeft(45);
-         	}
-      	}
+           	setTurnLeft(45);
+        	}
+     	}
 
       
    }
@@ -52,7 +52,7 @@ public class Virr extends AdvancedRobot
 	public void onScannedRobot(ScannedRobotEvent e) { 
 		// Original Author: Jae Marsh
      	// https://www.ibm.com/developerworks/library/j-dodge/
-      	if ((turn%2) == 0){
+     	if ((turn%2) == 0){
 			setTurnLeft(e.getBearing() + 90); //turns to the right to make it easier to
 		} else {
 			setTurnLeft(e.getBearing() - 90); 
