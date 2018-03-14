@@ -11,7 +11,9 @@ Going deeper into the code, we started off by having our bot inherit from the Ad
 If Virr detects a wall 45 pixels ahead of it, it will turn left by 45 degrees to avoid hitting the wall since it would cause a loss of energy and grants the possibility of getting stuck. Robocode uses the Cartesian coordinate system, so the bottom left corner of the battlefield locates the coordinate (0,0). When Virr gets hit by a bullet, it turns its gun to the direction of where the bullet came from and fires a shot before turning right and moves forward in that direction. If Virr collides with a robot, it uses the isMyFault method to check if it was moving towards the robot that was hit, and if it returns true, Virr moves backwards by 200 pixels. Otherwise, it would fire a bullet towards the enemy robot.
 
 How to Implement Virr robot:
-Download and install Robocode from this link: https://sourceforge.net/projects/robocode/ Download and extract Virr robot from our GitHub repository: https://github.com/cassilam/robocode
+
+Download and install Robocode from this link: https://sourceforge.net/projects/robocode/ 
+Download and extract Virr robot from our GitHub repository: https://github.com/cassilam/robocode
 Navigate a Finder/Explorer window to C:\robocode\robots
 Drag the “jhcao_cassilam” folder from the folder you downloaded from GitHub to the robots folder
 You should now be able to use Virr in a battle
