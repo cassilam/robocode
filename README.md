@@ -1,6 +1,7 @@
 # robocode
 
 A Robocode project for California State Polytechnic University, Pomona's CS 141 course
+
 Team Members: Cassi Lam, Joanna Cao
 
 Essentially, what we wanted our robot Virr to do was be a dodging bot that only moved minimally so as to avoid bullets, while preventing certain types of targeting such as predictive targeting and circular targeting from hitting our bot as well. Virr would then fire a bullet back at the bot that it scanned after it dodges. Virr also avoid walls by checking its distance from walls. This is necessarily because running into walls causes loss in power and the possibility of it getting stuck.
